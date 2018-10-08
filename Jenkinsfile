@@ -66,7 +66,7 @@ node('master') {
 
        // Push a docker image to Artifactory (here we're pushing hello-world:latest). The push method also expects
        // Artifactory repository name (<target-artifactory-repository>).
-       def buildInfo = rtDocker.push "digitaldemo-docker-snapshot-images.jfrog.io/sparktodo:SNAPSHOT-${JOB_NAME}", 'docker-snapshot-images'
+       def buildInfo = rtDocker.push "digitaldemo-docker-snapshot-images.jfrog.io/sparktodo-${JOB_NAME}:SNAPSHOT", 'docker-snapshot-images'
 
        //Publish the build-info to Artifactory:
        server.publishBuildInfo buildInfo
