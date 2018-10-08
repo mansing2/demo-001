@@ -105,7 +105,7 @@ This stage consists of following steps
     }
  ```
 
- #### Stage 5: Push snapshot artifacts and images to JFrog artifactory
+ #### Stage 4: Push snapshot artifacts and images to JFrog artifactory
 
 This stage consists of following steps
 * Upload snapshot artifacts to JFrog Artifactory
@@ -133,11 +133,11 @@ This stage consists of following steps
    server.publishBuildInfo buildInfo
 
  ```
- #### Stage 6: Wait for Approval
+ #### Stage 5: Wait for Approval
  ```
   input 'Release project for Deployment?'
  ```
- #### Stage 7: Release and Push releases to JFrog
+ #### Stage 6: Release and Push releases to JFrog
 
 This stage consists of following steps
 * Once approved Prepare the snapshot for release
@@ -156,7 +156,7 @@ This stage consists of following steps
 
  ```
 
- ### Stage 7:
+ ### Stage 7: Push release to Artifactory
 
  ```
  // Create an Artifactory server instance:
